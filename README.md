@@ -1,0 +1,1 @@
+this a simple website who show you an information about your battery information such as battery level, charging status etc on the device you are using
