@@ -1,9 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* font-family: 'Poppins', sans-serif;
-font-family: 'Rubik Iso', cursive; */
 }
 
 body{
@@ -18,7 +15,6 @@ header {
     align-items: center;
     margin-top: 50px;
     font-family: 'Rubik Iso', cursive;
-    font-size: 30px;
 }
 
 header p {
@@ -71,21 +67,4 @@ h1::before {
     padding: 20px;
     width: 50%;
     border-radius: 10px;
-}
-
-.item:nth-child(1){
-    box-shadow: 0px 0px 10px rgb(232, 77, 77);
-    color: rgb(232, 77, 77);
-}
-.item:nth-child(2){
-    box-shadow: 0px 0px 10px rgb(77, 103, 232);
-    color: rgb(77, 103, 232);
-}
-.item:nth-child(3){
-    box-shadow: 0px 0px 10px rgb(77, 232, 95);
-    color: rgb(77, 232, 95);
-}
-.item:nth-child(4){
-    box-shadow: 0px 0px 10px rgb(227, 232, 77);
-    color: rgb(227, 232, 77);
 }

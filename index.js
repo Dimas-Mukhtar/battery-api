@@ -11,6 +11,7 @@ const battery = () =>{
                 updateChargingInfo()
                 updateChargingTimeInfo()
                 updateDischargingTimeInfo()
+                console.log(battery)
             }
             updateAllBatteryDetails()
 
