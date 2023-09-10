@@ -6,7 +6,6 @@ const batteryDisChargingTime = document.querySelector(".batteryDisChargingTime")
 const battery = () =>{
     if("getBattery" in navigator){
         navigator.getBattery().then((battery)=>{
-            // Global Function
             function updateAllBatteryDetails(){
                 updateLevelInfo()
                 updateChargingInfo()
@@ -16,39 +15,24 @@ const battery = () =>{
             updateAllBatteryDetails()
 
             // battery level info
-            battery.addEventListener("levelinfo", ()=>{
-                updateLevelInfo()
-            })
-
             function updateLevelInfo(){
                 const level = battery.level * 100 + "%"
                 batteryLevel.innerHTML = level
             }
 
             // battery charging info
-            battery.addEventListener("charginginfo", ()=>{
-                updateChargingInfo()
-            })
-
             function updateChargingInfo(){
                 const isCharging = battery.charging ? "Yes" : "No"
                 batteryCharging.innerHTML = isCharging
             }
 
             // battery charging time info
-            battery.addEventListener("chargingtimechangeinfo", ()=>{
-                updateChargingTimeInfo()
-            })
-
             function updateChargingTimeInfo(){
                 const chargingTime = battery.chargingTime
-                batteryChargingTime.innerHTML = chargingTime
+                batteryChargingTime.innerHTML = chargingTime + " seconds"
             }
-            // battery discharging time info
-            battery.addEventListener("dischargingtimeinfo", ()=>{
-                updateDischargingTimeInfo()
-            })
 
+            // battery discharging time info
             function updateDischargingTimeInfo(){
                 const dischargingTIme = battery.dischargingTime
                 batteryDisChargingTime.innerHTML = dischargingTIme + " seconds"
